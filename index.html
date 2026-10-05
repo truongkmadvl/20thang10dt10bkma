@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Các Bạn Nữ Lớp DT10B - Yêu Thương & Rạng Rỡ</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Quicksand & Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        script: ['Dancing Script', 'cursive'],
+                    },
+                    colors: {
+                        pastel: {
+                            pink: '#ffd1dc',
+                            rose: '#fbcfe8',
+                            purple: '#e9d5ff',
+                            lavender: '#f3e8ff',
+                            cream: '#fffdf9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(236, 72, 153, 0.4), 0 0 30px rgba(168, 85, 247, 0.3);
+        }
+        .envelope-flap {
+            transition: transform 0.6s ease;
+            transform-origin: top;
+        }
+        .envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+        }
+        .envelope-letter {
+            transition: all 0.6s ease;
+            transform: translateY(0);
+        }
+        .envelope.open .envelope-letter {
+            transform: translateY(-70px);
+            z-index: 30;
+        }
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-rose-100 text-gray-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-pink-200 selection:text-pink-900">
+
+    <canvas id="petalCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+    <!-- Main Wrapper -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+
+        <!-- Header / Navigation Badge -->
+        <header class="w-full py-6 px-4 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-pink-400 to-purple-400 flex items-center justify-center text-white shadow-lg shadow-pink-200">
+                    <i class="fa-solid fa-heart text-xl animate-pulse"></i>
+                </div>
+                <div>
+                    <h1 class="font-serif font-bold text-xl md:text-2xl text-purple-900 tracking-wide">Tập Thể DT10B</h1>
+                    <p class="text-xs text-pink-600 font-semibold tracking-wider uppercase">Gửi Giao Yêu Thương</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-2 bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-pink-200 text-sm text-purple-800 shadow-sm">
+                <i class="fa-solid fa-spa text-pink-500"></i>
+                <span>Chúc một nửa thế giới luôn rạng rỡ!</span>
+            </div>
+        </header>
+
+        <!-- Hero Banner Section -->
+        <section class="flex-grow flex items-center justify-center px-4 py-12 md:py-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block mb-4 px-6 py-2 rounded-full bg-pink-100/80 border border-pink-300 text-pink-700 text-sm md:text-base font-medium shadow-sm animate-float">
+                    <i class="fa-solid fa-crown mr-2 text-yellow-500"></i> Gửi Những Đóa Hoa Tuyệt Vời Nhất Của Lớp DT10B
+                </div>
+                <h2 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight glow-text">
+                    Gửi Các Bạn Nữ <br><span class="font-script text-pink-600 text-5xl sm:text-7xl md:text-8xl">DT10B Thân Yêu</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
+                    Hôm nay, ngày mai và mãi mãi về sau, chúc cho các bạn nữ lớp DT10B luôn giữ được nụ cười rạng ngời trên môi, tràn đầy nhiệt huyết, tự tin tỏa sáng và luôn được yêu thương trọn vẹn!
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#messages" class="px-8 py-3.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold shadow-lg shadow-pink-300 hover:shadow-xl hover:from-pink-600 hover:to-purple-700 transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-envelope-open-text mr-2"></i> Khám Phá Lời Chúc
+                    </a>
+                    <a href="#wishes" class="px-8 py-3.5 rounded-full bg-white/80 backdrop-blur border border-pink-300 text-purple-900 font-semibold shadow-md hover:bg-white transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-gift mr-2">Chọn Hộp Quà</i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Heartwarming Message Section -->
+        <section id="messages" class="max-w-5xl mx-auto px-4 py-16 w-full">
+            <div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl border border-white/80 relative overflow-hidden">
+                <div class="absolute -right-12 -top-12 w-48 h-48 bg-pink-200/40 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-purple-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-pink-600 font-semibold tracking-widest text-sm uppercase">Tâm Tư Gửi Gắm</span>
+                    <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-2">Gửi Các Nữ Thần DT10B</h3>
+                    <div class="w-16 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-700">
+                    <div class="bg-white/70 p-6 rounded-2xl border border-pink-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-gray-900 mb-2">Sức Sống & Tươi Vui</h4>
+                            <p class="text-sm leading-relaxed text-gray-600">
+                                Cảm ơn các bạn vì đã luôn mang lại năng lượng tích cực, sự dịu dàng nhưng không kém phần mạnh mẽ cho lớp DT10B của chúng ta.
+                            </p>
+                        </div>
+                        <span class="text-xs text-pink-500 font-semibold mt-4 block">#DT10B_Energy</span>
+                    </div>
+
+                    <div class="bg-white/70 p-6 rounded-2xl border border-purple-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-gray-900 mb-2">Xinh Đẹp & Tài Năng</h4>
+                            <p class="text-sm leading-relaxed text-gray-600">
+                                Không chỉ xinh đẹp, các bạn nữ DT10B còn vô cùng thông minh, khéo léo và luôn đạt kết quả xuất sắc trong học tập lẫn các hoạt động.
+                            </p>
+                        </div>
+                        <span class="text-xs text-purple-500 font-semibold mt-4 block">#DT10B_Talent</span>
+                    </div>
+
+                    <div class="bg-white/70 p-6 rounded-2xl border border-rose-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-xl mb-4">
+                                <i class="fa-solid fa-face-smile-beam"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-gray-900 mb-2">Hạnh Phúc Trọn Vẹn</h4>
+                            <p class="text-sm leading-relaxed text-gray-600">
+                                Chúc các bạn luôn giữ vững niềm tin, theo đuổi đam mê và luôn nhận được sự yêu thương chân thành từ những người xung quanh.
+                            </p>
+                        </div>
+                        <span class="text-xs text-rose-500 font-semibold mt-4 block">#DT10B_Happiness</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Greeting Cards / Envelopes Section -->
+        <section id="wishes" class="max-w-5xl mx-auto px-4 py-16 w-full">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-purple-600 font-semibold tracking-widest text-sm uppercase">Món Quà Bất Ngờ</span>
+                <h3 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-2">Bức Thư Gửi Từng Bạn Nữ</h3>
+                <p class="text-gray-600 mt-2 text-sm md:text-base">Chạm hoặc nhấp vào các phong bì bên dưới để mở thông điệp đặc biệt dành riêng cho bạn!</p>
+                <div class="w-16 h-1 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Envelope 1 -->
+                <div class="envelope-card bg-white/80 backdrop-blur rounded-2xl p-6 shadow-lg border border-pink-200 flex flex-col items-center cursor-pointer transition transform hover:-translate-y-2 hover:shadow-xl group" onclick="openWishModal('Gửi bạn nữ DT10B thân mến!', 'Chúc bạn luôn rạng rỡ như ánh bình minh, luôn giữ được nụ cười tươi tắn và đạt được mọi dự định trong tương lai gần nhất nhé! 💖')">
+                    <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center text-pink-500 text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg text-gray-900 mb-1">Phong Bì Số 01</h4>
+                    <p class="text-xs text-pink-600 font-medium mb-3">Thông điệp rạng rỡ</p>
+                    <span class="text-xs bg-pink-50 text-pink-700 px-3 py-1 rounded-full border border-pink-200">Nhấn để mở</span>
+                </div>
+
+                <!-- Envelope 2 -->
+                <div class="envelope-card bg-white/80 backdrop-blur rounded-2xl p-6 shadow-lg border border-purple-200 flex flex-col items-center cursor-pointer transition transform hover:-translate-y-2 hover:shadow-xl group" onclick="openWishModal('Gửi bông hoa tuyệt vời của DT10B!', 'Chúc bạn luôn tự tin, bản lĩnh, tỏa sáng ở bất cứ nơi đâu và luôn là niềm tự hào của tập thể lớp chúng mình! ✨')">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope-open"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg text-gray-900 mb-1">Phong Bì Số 02</h4>
+                    <p class="text-xs text-purple-600 font-medium mb-3">Thông điệp tỏa sáng</p>
+                    <span class="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full border border-purple-200">Nhấn để mở</span>
+                </div>
+
+                <!-- Envelope 3 -->
+                <div class="envelope-card bg-white/80 backdrop-blur rounded-2xl p-6 shadow-lg border border-rose-200 flex flex-col items-center cursor-pointer transition transform hover:-translate-y-2 hover:shadow-xl group" onclick="openWishModal('Gửi cô gái ngọt ngào của DT10B!', 'Chúc bạn một đời bình an, luôn có những người bạn tuyệt vời bên cạnh và mỗi ngày trôi qua đều là một ngày ngập tràn niềm vui! 🌸')">
+                    <div class="w-20 h-20 bg-rose-100 rounded-full flex items-center justify-center text-rose-500 text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h4 class="font-serif font-bold text-lg text-gray-900 mb-1">Phong Bì Số 03</h4>
+                    <p class="text-xs text-rose-600 font-medium mb-3">Thông điệp ngọt ngào</p>
+                    <span class="text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full border border-rose-200">Nhấn để mở</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Message Modal (Replaces alert) -->
+        <div id="wishModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+            <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl transform scale-95 transition-transform duration-300 border border-pink-100 relative">
+                <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-gradient-to-tr from-pink-400 to-purple-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg shadow-pink-200">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <div class="text-center mt-6">
+                    <h4 id="modalTitle" class="font-serif font-bold text-2xl text-gray-900 mb-2">Tiêu Đề</h4>
+                    <p id="modalContent" class="text-gray-600 text-base leading-relaxed mb-6">Nội dung lời chúc...</p>
+                    <button onclick="closeWishModal()" class="w-full py-3 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold shadow-md hover:opacity-90 transition">
+                        Nhận Lời Chúc <i class="fa-solid fa-heart ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full py-8 text-center text-gray-500 text-sm mt-auto border-t border-pink-200/50 bg-white/30 backdrop-blur">
+            <p>© 2026 - Bản quyền thuộc về Tập Thể Lớp DT10B. Chúc các bạn nữ luôn hạnh phúc và thành công!</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Falling Flower Petals Canvas Animation
+        const canvas = document.getElementById('petalCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        class Petal {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * -height - 20;
+                this.size = Math.random() * 10 + 8;
+                this.speedY = Math.random() * 1.5 + 0.8;
+                this.speedX = Math.random() * 2 - 1;
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 2 - 1;
+                this.opacity = Math.random() * 0.5 + 0.4;
+                // Pastel pink and purple petal colors
+                const colors = ['#ffccd5', '#f3c6ff', '#ffe5ec', '#e8d7ff', '#ffb3c6'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.y / 50) + this.speedX;
+                this.rotation += this.rotationSpeed;
+
+                if (this.y > height + 20) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate((this.rotation * Math.PI) / 180);
+                ctx.globalAlpha = this.opacity;
+
+                ctx.beginPath();
+                ctx.fillStyle = this.color;
+                // Draw a cute petal shape using ellipse/bezier
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(this.size / 2, -this.size / 2, this.size, this.size / 2, 0, this.size);
+                ctx.bezierCurveTo(-this.size, this.size / 2, -this.size / 2, -this.size / 2, 0, 0);
+                ctx.fill();
+
+                ctx.restore();
+            }
+        }
+
+        const petalCount = Math.floor(width / 25);
+        const petals = [];
+        for (let i = 0; i < petalCount; i++) {
+            petals.push(new Petal());
+        }
+
+        function animatePetals() {
+            ctx.clearRect(0, 0, width, height);
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+            requestAnimationFrame(animatePetals);
+        }
+
+        animatePetals();
+
+        // Modal Functions (Replacing alert)
+        function openWishModal(title, content) {
+            const modal = document.getElementById('wishModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+
+            modalTitle.textContent = title;
+            modalContent.textContent = content;
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.firstElementChild.classList.remove('scale-95');
+            modal.firstElementChild.classList.add('scale-100');
+        }
+
+        function closeWishModal() {
+            const modal = document.getElementById('wishModal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.firstElementChild.classList.remove('scale-100');
+            modal.firstElementChild.classList.add('scale-95');
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('wishModal');
+            if (e.target === modal) {
+                closeWishModal();
+            }
+        });
+    </script>
+</body>
+</html>
